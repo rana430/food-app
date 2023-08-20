@@ -1,29 +1,37 @@
 import React from 'react'
+import Illustration from "../../assets/images/register-img.jpg"
+import './login.css'
 
 const Login = () => {
+
   return (
-    <div className="container text-center d-flex flex-row justify-content-center align-items-center align-content-center flex-wrap" >
-      <div className="row">
-        <div className="col">
-          <img src="./pic.jpg" alt="" srcset="" />
-        </div>
-        <div className="col shadow bg-body-tertiary rounded">
-          <form className="row g-3 needs-validation text-start" style={{}} novalidate>
-            <div className="mb-3">
-              <label for="exampleFormControlInput1" className="form-label mt-5 ">Email</label>
-              <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-            </div>
-            <div className="mb-3">
-              <label for="exampleFormControlInput1" className="form-label">Password</label>
-              <input type="password" className="form-control" id="inputPassword2" placeholder="Enter your Password"/>
-            </div>
-            <div className="col-12 d-grid gap-2 my-5 text-center">
-              <button className="btn submit btn-primary" type="submit">Login In</button>
-            </div>
-          </form>
+    <div className=" canvas">
+      <div className='col-md-6 wrapper'>
+        <div className="images">
+          <img src={Illustration} alt="" />
         </div>
       </div>
+
+      <form data-toggle="validator" className='col-md-6 form-container d-flex flex-column align-content-center flex-wrap '>
+        <div className="form-group col-md-9">
+          <label htmlFor="inputEmail" className="control-label textFiled text-secondary-emphasis pt-4">Email</label>
+          <input type="email" className="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required />
+          <div className="help-block with-errors"></div>
+        </div>
+        <div className="form-group col-md-9">
+          <label htmlFor="inputPassword" className="control-label textFiled text-secondary-emphasis pt-4">Password</label>
+          <div className="form-inline">
+            <div className="form-group">
+              <input type="password" data-minlength="6" className="form-control" id="inputPassword" placeholder="Password" required />
+            </div>
+          </div>
+        </div>
+        <div className="form-group mt-5">
+          <button type="submit" className="btn btn-danger">Submit</button>
+        </div>
+      </form>
     </div>
+
   )
 }
 

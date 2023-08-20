@@ -1,19 +1,35 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom";
-import Sidebar from './component/sidebar/Sidebar';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Dashboard from './pages/dashbord/Dashboard'
 import Analysitic from './pages/analystic/Analystic'
 import Customer from './pages/customers/Customer'
 import Message from './pages/message/Message'
 import Setting from './pages/setting/Setting'
 import Logout from './pages/logout/Logout'
-import Navbar from './component/navbar/Navbar';
 import Login from './pages/login/Login';
+import Root from './layout/Root';
 
 function App() {
+
+  const routes = createBrowserRouter([
+    {
+        path: '/', element:<Root/>, children: [
+            {index: true, element: <Dashboard/>},
+            {path: '/dashboard', element: <Dashboard/>},
+            {path: '/analystic', element: <Analysitic/>},
+            {path: '/customer', element: <Customer/>},
+            {path: '/message', element: <Message/>},
+            {path: '/setting', element: <Setting/>},
+        ]
+    },
+    {path: '/logout', element: <Logout/>},
+    {path: '/login', element: <Login/>}
+])
+
+
   return (
     <div className="App main-div container">
-      <Sidebar/>
+      {/* <Sidebar/>
       <div>
       <Navbar/>
       <Routes>
@@ -25,9 +41,12 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      </div>
-    </div>
+      </div> */}
+      <RouterProvider router={routes}/>
+     </div>
+    
   );
+
 }
 
 export default App;
