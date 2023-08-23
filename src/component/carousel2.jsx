@@ -100,7 +100,7 @@ export default class Carousel2 extends Component {
               name={item.name}
               img={item.img}
               orderImg={item.orderImg}
-              productRating={item.productRating}
+              productRating={item.rate}
               date={item.date}
               review={item.review}
               /* style={{ margin: "0 5px" }} */

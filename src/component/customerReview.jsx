@@ -9,7 +9,7 @@ export const CustomerReview = ({
   productRating,
   orderImg,
 }) => {
-  console.log(productRating);
+  
   return (
     <div style={{ margin: "10px" }}>
       <div className="review-body">
