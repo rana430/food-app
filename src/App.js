@@ -1,16 +1,17 @@
-import './App.css';
+
+import { Customer } from "./pages/Customer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Dashboard from './pages/dashbord/Dashboard'
 import Analysitic from './pages/analystic/Analystic'
-import Customer from './pages/customers/Customer'
 import Message from './pages/message/Message'
 import Setting from './pages/setting/Setting'
 import Logout from './pages/logout/Logout'
 import Login from './pages/login/Login';
 import Root from './layout/Root';
 
-function App() {
+import "./App.css";
 
+function App() {
   const routes = createBrowserRouter([
     {
         path: '/', element:<Root/>, children: [
@@ -26,27 +27,12 @@ function App() {
     {path: '/login', element: <Login/>}
 ])
 
-
   return (
-    <div className="App main-div container">
-      {/* <Sidebar/>
-      <div>
-      <Navbar/>
-      <Routes>
-        <Route path="/"element={<Dashboard/>}/>
-        <Route path="/analystic" element={<Analysitic />}/>
-        <Route path="/Customer" element={<Customer />} />
-        <Route path="/message" element={<Message />} />
-        <Route path="/setting" element={<Setting />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      </div> */}
+    <div style={{display:"flex", justifyContent:"space-between",flexDirection:"column" }}>
+      
       <RouterProvider router={routes}/>
-     </div>
-    
+    </div>
   );
-
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Illustration from "../../assets/images/register-img.jpg"
+import { useForm } from "react-hook-form";
 import './login.css'
-
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [email, setEmail] = useState()

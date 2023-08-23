@@ -4,7 +4,7 @@ import { MdOutlineNotificationsActive } from "react-icons/md";
 import avatar from "../../assets/avatar.png"
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow bg-body-tertiary rounded " style={{height:'7vh'}}>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow bg-body-tertiary rounded " style={{height:'10vh'}}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">Hello Admin <br /> <span style={{ fontSize: '.7rem' }}>4.45 PM  -  19 Jan 2023</span> </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
           <form className="d-flex flex-row justify-content-center align-items-center " role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width:'400px'}} />
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  />
             <button className="btn btn-outline-danger btn-sm" type="submit">Search</button>
           </form>
         </div>
