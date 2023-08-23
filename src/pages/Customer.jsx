@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import  Carousel1  from "../component/carousel1";
-import  Carousel2  from "../component/carousel2";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Carousel1 from "../component/carousel1";
+import Carousel2 from "../component/carousel2";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../css/customerstyles.css";
 export const Customer = () => {
   const customers = [
@@ -123,31 +123,17 @@ export const Customer = () => {
       id: 9,
     },
   ];
-  
-  
+
   return (
     <>
-    <div className="container-customer">
-      <div className="header">
-        <h3>Customer orders</h3>
+      <div className="container-customer">
         <div className="carousel-container">
-          <Carousel1
-            
-            items={customers}
-            style={{ height: "500px" }}>
-          </Carousel1>
+          <Carousel1 items={customers} style={{ height: "500px" }}></Carousel1>
+        </div>
+        <div className="customer-review">
+          <Carousel2 items={customers}></Carousel2>
         </div>
       </div>
-      <div className="customer-review">
-        <div className="customer-review-header">
-          <h3>Customer Review</h3>
-          <p>Eum fuga consequuntur utadsjn et.</p>
-        </div>
-        <Carousel2 items={customers}>
-          
-        </Carousel2>
-      </div>
-    </div>
     </>
   );
 };

@@ -21,7 +21,7 @@ h6 {
   padding: 10px;
   width: 80%;
   margin: 0 auto;
-  overflow-y: auto;
+  
 }
 /*Customer orders section*/
 .customer-body {
@@ -53,8 +53,12 @@ h6 {
   align-items: center;
   line-height: 0.5;
   height: 30px;
+}.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .customer-data-name img {
   width: 40px;
@@ -96,8 +100,9 @@ h6 {
 }
 .header h3 {
   top: 15px;
-  position: relative;
+  
   font-weight: 600;
+
 }
 
 @media (max-width:980px) {
@@ -130,6 +135,13 @@ h6 {
 }
 
 /*Customer Review section*/
+
+.review-header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .customer-data-name-review{
   width: 80%;
   display: flex;
