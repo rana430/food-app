@@ -9,6 +9,7 @@ import { CustomerReview } from "./customerReview";
 export default class Carousel2 extends Component {
   constructor(props) {
     super(props);
+    console.log(props)
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.state = {
@@ -56,7 +57,7 @@ export default class Carousel2 extends Component {
           },
         },
         {
-          breakpoint: 900,
+          breakpoint: 800,
           settings: {
             slidesToShow: 1,
             slidesToScroll:1,
@@ -72,6 +73,7 @@ export default class Carousel2 extends Component {
         },
       ],
     };
+    
   
     return (
       <div>
@@ -92,6 +94,7 @@ export default class Carousel2 extends Component {
 
         <Slider ref={(c) => (this.slider = c)} {...settings}>
           {items.map((item) => (
+            
             <CustomerReview
               key={item.id}
               name={item.name}
@@ -100,8 +103,9 @@ export default class Carousel2 extends Component {
               productRating={item.productRating}
               date={item.date}
               review={item.review}
-              style={{ margin: "0 5px" }}
+              /* style={{ margin: "0 5px" }} */
             />
+            
           ))}
         </Slider>
       </div>

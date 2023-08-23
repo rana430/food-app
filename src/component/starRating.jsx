@@ -1,7 +1,9 @@
 import React from "react";
+import { Customer } from "../pages/Customer";
 import "../css/customerstyles.css";
 
 const StarRating = ({ rating }) => {
+  
   const renderStars = () => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {

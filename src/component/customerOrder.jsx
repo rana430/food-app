@@ -18,7 +18,7 @@ export const CustomerOrder = ({name,precentage,img,order}) => {
         <div className="order-precentage">
           <p>{precentage}%</p>
           <div className="precentage-container">
-            <div className="precentage-bar"></div>
+            <div className="precentage-bar" style={{width:`${precentage}%`}}></div>
           </div>
         </div>
       </div>
