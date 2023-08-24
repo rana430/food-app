@@ -177,6 +177,22 @@ h6 {
   margin-bottom: 0;
   color: var(--light-gray-color);
 }
+.customer-review-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  
+}
+.review-rate{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
 .customer-review-text p,
 .customer-name-review p {
   color: var(--light-gray-color);
@@ -186,7 +202,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 60%;
+  width: 100%;
 }
 .review-body {
   display: flex;
@@ -197,6 +213,7 @@ h6 {
   border-radius: 10px;
   padding: 18px;
   justify-content: space-between;
+  
 }
 .star-rating {
   display: inline-block;
@@ -294,6 +311,43 @@ h6 {
   .order-img img{
     width: 120px;
     height: 120px;
+  }
+  .customer-review-text{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  
+    
+  }
+  .review-rate{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+  }
+}
+@media (max-width:450px) {
+  .order-img{
+    width: 40%;
+  }
+  .order-img img{
+    width: 80px;
+    height: 80px;
+  }
+  .customer-review-text{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  
+    
+  }
+  .review-rate{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
   }
 }
 

@@ -9,7 +9,6 @@ export const CustomerReview = ({
   productRating,
   orderImg,
 }) => {
-  
   return (
     <div style={{ margin: "10px" }}>
       <div className="review-body">
@@ -22,15 +21,16 @@ export const CustomerReview = ({
             </div>
           </div>
           <div className="customer-review-text">
-            <p>{review}</p>
+            <div className="review-rate">
+              <p>{review}</p>
+              <div className="rating">
+                <StarRating rating={productRating} />
+              </div>
+            </div>
+            <div className="order-img">
+              <img src={orderImg} alt="orderimage" />
+            </div>
           </div>
-          <div className="rating">
-            <StarRating rating={productRating} />
-          </div>
-        </div>
-
-        <div className="order-img">
-          <img src={orderImg} alt="orderimage" />
         </div>
       </div>
     </div>
