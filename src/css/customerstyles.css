@@ -191,7 +191,7 @@ h6 {
 .review-body {
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 10px;
   border: 1px solid transparent;
   box-shadow: 0 0 5px rgba(0,0,0,.2);
   border-radius: 10px;
@@ -212,13 +212,14 @@ h6 {
   color: #ffcc00;
 }
 .order-img {
-  width: 30%;
+  width: 40%;
 }
 .order-img img {
   width: 120px;
   border: 1px solid transparent;
   border-radius: 50%;
   height: 120px;
+  margin: 0 auto;
 }
 .next, 
 .prev { 
@@ -237,15 +238,8 @@ h6 {
 
 } 
 
-@media (max-width:900px) {
-  .next,
-  .prev{
-    width: 2em;
-    height: 2em;
-  }
 
-}
-@media (max-width:720px) {
+@media (max-width:850px) {
   .next,
   .prev{
     width: 2em;
@@ -277,12 +271,30 @@ h6 {
   .order-img img{
     width: 100px;
     height: 100px;
+    margin: 0;
   }
   .customer-name-review p{
     font-size: 0.7em;
   }
-  
+  .review-body{
+    flex-direction: column;
+  }
+  .review-li{
+    width: 80%;
+  }
+  .customer-data-name-review{
+    gap: 10px;
+  }
 
+}
+@media (max-width:750px) {
+  .order-img{
+    width: 40%;
+  }
+  .order-img img{
+    width: 120px;
+    height: 120px;
+  }
 }
 
 
