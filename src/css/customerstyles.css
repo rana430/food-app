@@ -272,6 +272,9 @@ h6 {
     width: 100px;
     height: 100px;
   }
+  .customer-name-review p{
+    font-size: 0.7em;
+  }
   
 
 }
