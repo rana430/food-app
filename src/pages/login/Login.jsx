@@ -1,27 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Illustration from "../../assets/images/register-img.jpg"
 import { useForm } from "react-hook-form";
 import './login.css'
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
-  function handleClick(e) {
+  const onSubmit = (e) => {
+    // e.preventDefault()
     console.log(e);
-    let userData ={
-      username:email,
-      password:password
-    }
-    fetch('https://fakestoreapi.com/auth/login', {
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method: 'POST',
-      body: JSON.stringify(userData)
-    })
-      .then(res => res.json())
-      .then(data => console.log(data))
   }
+
   return (
     <div className=" canvas">
       <div className='col-md-6 wrapper'>
@@ -29,15 +16,13 @@ const Login = () => {
           <img src={Illustration} alt="" />
         </div>
       </div>
-      <form onSubmit={handleSubmit(handleClick)} data-toggle="validator" className='col-md-6 form-container d-flex flex-column align-content-center flex-wrap '>
+      <form onSubmit={handleSubmit(onSubmit)} data-toggle="validator" className='col-md-6 form-container d-flex flex-column align-content-center flex-wrap '>
         <div className="form-group col-md-9">
           <label htmlFor="inputEmail" className="control-label textFiled text-secondary-emphasis pt-4">Email</label>
           <input
-            onChange={e => setEmail(e.target.value)}
             type="email"
             className="form-control"
             id="inputEmail"
-            name='email'
             placeholder="Email"
             {...register("email",
               {
@@ -54,10 +39,8 @@ const Login = () => {
           <div className="form-inline">
             <div className="form-group">
               <input
-                onChange={e => setPassword(e.target.value)}
                 type="password"
                 data-minlength="6"
-                name='password'
                 className="form-control"
                 id="inputPassword"
                 placeholder="Password"
