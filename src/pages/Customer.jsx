@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Carousel1 from "../component/carousel1";
-import Carousel2 from "../component/carousel2";
+import Carousel1 from "../../src/component/carousel1"
+import Carousel2 from "../../src/component/carousel2";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../css/customerstyles.css";
 export const Customer = () => {
