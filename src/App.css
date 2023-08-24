@@ -8,7 +8,6 @@
   box-sizing: border-box;
   font-family: "Cairo", sans-serif !important;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -133,6 +132,4 @@ a{
   border-radius: 50%;
   margin-left:2rem ;
 }
-.flex-nowrap{
-  flex-wrap: nowrap;
-}
+
