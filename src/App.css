@@ -86,7 +86,7 @@ a {
   justify-content: space-between;
   padding-block: 50px;
   user-select: none;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 .sidebar-div a {
   color: rgb(0, 0, 0);
