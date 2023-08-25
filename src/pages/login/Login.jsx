@@ -30,6 +30,9 @@ const Login = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit(handleClick)} data-toggle="validator" className='col-md-6 form-container d-flex flex-column align-content-center flex-wrap '>
+        <div className="mb-5">
+        <img src={Illustration} alt="" />
+        </div>
         <div className="form-group col-md-9">
           <label htmlFor="inputEmail" className="control-label textFiled text-secondary-emphasis pt-4">Email</label>
           <input
