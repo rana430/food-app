@@ -169,13 +169,13 @@ select {
 @media screen and (max-width: 560px) {
   .food-item {
     padding: 5% 0;
-    width: 80%;
+    width: 90%;
     margin: auto;
     align-content: center;
     margin-top: 2%;
   }
   .title {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-bottom: 5%;
     margin-top: 5%;
@@ -191,7 +191,7 @@ select {
     gap: 10px;
   }
   .card {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 }
