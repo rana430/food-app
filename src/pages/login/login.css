@@ -133,3 +133,6 @@ button:hover {
 .labals {
   font-size: 1.3rem;
 }
+.submit-btn{
+  background: rgba(224, 34, 0, 1);
+}
