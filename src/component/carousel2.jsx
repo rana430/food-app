@@ -9,7 +9,7 @@ import { CustomerReview } from "./customerReview";
 export default class Carousel2 extends Component {
   constructor(props) {
     super(props);
-    console.log(props)
+    console.log(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.state = {
@@ -34,7 +34,7 @@ export default class Carousel2 extends Component {
   }
 
   render() {
-    const { items} = this.props;
+    const { items } = this.props;
     const settings = {
       className: "center",
       centerMode: false,
@@ -53,19 +53,18 @@ export default class Carousel2 extends Component {
             slidesToShow: 2,
             slidesToScroll: 2,
             infinite: true,
-            
           },
         },
         {
           breakpoint: 800,
           settings: {
             slidesToShow: 1,
-            slidesToScroll:1,
+            slidesToScroll: 1,
             initialSlide: 1,
           },
         },
         {
-          breakpoint: 480,
+          breakpoint: 560,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -73,39 +72,41 @@ export default class Carousel2 extends Component {
         },
       ],
     };
-    
-  
+
     return (
       <div>
-        <div className="buttons">
-          <button
-            className="prev"
-            onClick={this.previous}
-            disabled={this.state.currentSlide === 0}>
-            <img src={prevIcon} alt="prev"></img>
-          </button>
-          <button
-            className="next"
-            onClick={this.next}
-            disabled={this.state.currentSlide === items.length - 1}>
-            <img src={nextIcon} alt="next"></img>
-          </button>
+        <div className="review-header-container">
+          <div className="customer-review-header">
+            <h3>Customer Review</h3>
+            <p>Eum fuga consequuntur utadsjn et.</p>
+          </div>
+          <div className="buttons">
+            <button
+              className="prev"
+              onClick={this.previous}
+              disabled={this.state.currentSlide === 0}>
+              <img src={prevIcon} alt="prev"></img>
+            </button>
+            <button
+              className="next"
+              onClick={this.next}
+              disabled={this.state.currentSlide === items.length - 1}>
+              <img src={nextIcon} alt="next"></img>
+            </button>
+          </div>
         </div>
-
         <Slider ref={(c) => (this.slider = c)} {...settings}>
           {items.map((item) => (
-            
             <CustomerReview
               key={item.id}
               name={item.name}
               img={item.img}
               orderImg={item.orderImg}
-              productRating={item.productRating}
+              productRating={item.rate}
               date={item.date}
               review={item.review}
               /* style={{ margin: "0 5px" }} */
             />
-            
           ))}
         </Slider>
       </div>

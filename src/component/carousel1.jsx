@@ -33,7 +33,7 @@ export default class Carousel1 extends Component {
       }));
     }
   }
-  
+
   render() {
     const { items } = this.props;
     const settings = {
@@ -53,8 +53,6 @@ export default class Carousel1 extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            
-            
           },
         },
         {
@@ -62,15 +60,13 @@ export default class Carousel1 extends Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            
-            
           },
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1,
-            slidesToScroll:1,
+            slidesToScroll: 1,
             initialSlide: 1,
           },
         },
@@ -85,21 +81,22 @@ export default class Carousel1 extends Component {
     };
     return (
       <div>
-        <div className="buttons">
-          <button
-            className="prev"
-            onClick={this.previous}
-            disabled={this.state.currentSlide === 0}
-          >
-            <img src={prevIcon} alt="prev" />
-          </button>
-          <button
-            className="next"
-            onClick={this.next}
-            disabled={this.state.currentSlide === items.length - 1}
-          >
-            <img src={nextIcon} alt="next" />
-          </button>
+        <div className="header">
+          <h3>Customer orders</h3>
+          <div className="buttons">
+            <button
+              className="prev"
+              onClick={this.previous}
+              disabled={this.state.currentSlide === 0}>
+              <img src={prevIcon} alt="prev" />
+            </button>
+            <button
+              className="next"
+              onClick={this.next}
+              disabled={this.state.currentSlide === items.length - 1}>
+              <img src={nextIcon} alt="next" />
+            </button>
+          </div>
         </div>
         <Slider ref={(c) => (this.slider = c)} {...settings}>
           {items.map((item) => (

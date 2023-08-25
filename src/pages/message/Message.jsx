@@ -1,8 +1,9 @@
 import React from 'react'
+import Chatapp from './chatapp'
 
 const Message = () => {
   return (
-    <div>Message</div>
+    <Chatapp/>
   )
 }
 
