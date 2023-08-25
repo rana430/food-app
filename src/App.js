@@ -9,7 +9,7 @@ import Login from "./pages/login/Login";
 import Root from "./layout/Root";
 
 import "./App.css";
-/* import "./css/Analystic.css"; */
+import "./css/Analystic.css";
 
 function App() {
   const routes = createBrowserRouter([
