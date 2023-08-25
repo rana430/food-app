@@ -1,0 +1,152 @@
+.Customerorders,
+.CustomerReview
+{
+    display: grid;
+    padding: 1em 2em 3em 1em;
+}
+.Row-1C
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+.Pagination
+{
+    display: flex;
+    gap: 5px;
+}
+.NameCategory
+{
+color:  #464255;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Barlow;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.back,
+.forward
+{
+border-radius: 14px;
+background: #E02200;
+width: 2.5em;
+}
+.Row-2C
+{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding-top: 1em;
+}
+
+.Customer
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1em;
+}
+.AboutCustomer
+{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.AboutCustomerReview
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 3em;
+}
+.piccustomer
+{
+    width: 44px;
+    height: 44px;
+    border-radius: 35px;
+}
+.NameCustomer
+{
+color:  #000;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+.CountryCustomer
+{
+    color:  #d9d9d9;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+.NameCustomerReview
+{
+color: #464255;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Barlow;
+font-size: 21px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-bottom: 5px;
+}
+.Date
+{
+color: #A3A3A3;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Barlow;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; 
+}
+.Row-2CR
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.FeedBackCard
+{
+    display: flex;
+    width: 34em;
+    padding: 30px;
+    gap: 21px;
+    border-radius: 15px;
+    background:  #FDFDFD;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.DescriptionFeedBack
+{
+color:  #464255;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Barlow;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 23px; /* 164.286% */
+}
+.RatingeWithNumbers
+{
+color: var(--theme-color-grey-body, #464255);
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Barlow;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.Rating
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
