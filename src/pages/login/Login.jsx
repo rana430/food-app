@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Illustration from "../../assets/images/register-img.jpg"
+import Illustration from "../../assets/images/right.jpg"
+import logo from "../../assets/logo.png"
 import { useForm } from "react-hook-form";
 import './login.css'
 const Login = () => {
@@ -30,6 +31,9 @@ const Login = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit(handleClick)} data-toggle="validator" className='col-md-6 form-container d-flex flex-column align-content-center flex-wrap '>
+          <div className=' m-auto text-center'>
+            <img src={logo} alt="" srcset="" className='logo-login'/> <div className='food-delivary'> Food Delivery</div>
+          </div>
         <div className="form-group col-md-9">
           <label htmlFor="inputEmail" className="control-label textFiled text-secondary-emphasis pt-4">Email</label>
           <input
@@ -72,7 +76,7 @@ const Login = () => {
           </div>
         </div>
         <div className="form-group mt-5">
-          <button type="submit" className="btn btn-danger">Submit</button>
+          <button type="submit" className="btn submit-btn">Submit</button>
         </div>
       </form>
     </div>
