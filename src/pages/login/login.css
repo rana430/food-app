@@ -19,8 +19,8 @@
 }
 
 .wrapper {
-  height: 70vh;
-  width: 50vwh;
+  height: auto;
+  width: 50%;
   background-color: rgba(243, 243, 243, 0.559);
   border-radius: 30px;
   display: flex;
