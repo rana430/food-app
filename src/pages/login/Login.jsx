@@ -72,7 +72,7 @@ const Login = () => {
           </div>
         </div>
         <div className="form-group mt-5">
-          <button type="submit" className="btn btn-danger">Submit</button>
+          <button type="submit" className="btn submit-btn">Submit</button>
         </div>
       </form>
     </div>
