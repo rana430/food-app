@@ -1,13 +1,6 @@
 .canvas {
   width: 100vw;
   height: 100vh;
-  background: rgb(249, 248, 254);
-  background: linear-gradient(
-    90deg,
-    rgba(249, 248, 254, 1) 0%,
-    rgba(198, 198, 240, 1) 35%,
-    rgba(97, 212, 236, 1) 100%
-  );
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
@@ -101,6 +94,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background:rgba(224, 34, 0, 1);
 }
 #checkbox-field {
   width: 100%;
@@ -137,4 +131,7 @@ button:hover {
 }
 .labals {
   font-size: 1.3rem;
+}
+.submit-btn{
+  background: rgba(224, 34, 0, 1);
 }
