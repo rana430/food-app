@@ -1,4 +1,8 @@
+body {
+  overflow: hidden;
+}
 .ChatsContainer {
+  padding-top: 10px;
   width: 30%;
   height: 100vh;
   border-radius: 8px;
@@ -26,6 +30,7 @@
   gap: 0px;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .chatterName {
@@ -80,6 +85,12 @@
   align-items: flex-start;
   gap: 18px;
 }
+.pic-name-lastmsg {
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
 
 .activeChat {
   display: flex;
@@ -88,39 +99,44 @@
   width: 100%;
   flex-shrink: 0;
   border-radius: 8px;
-  background: rgba(224, 34, 0, 0.121);
+  background-color: #fdf4f2;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
   height: 100%;
 }
 .chatHeader {
   width: 100%;
-  margin: 5px 0;
+  height: 4.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.mainChat_pic_contain {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  align-content: center;
+}
 .pic-name-lastmsg {
   display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 8px var(--8, 8px);
-  flex: 1 0 0;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
   flex-wrap: wrap;
   border-radius: var(--8, 8px);
-  padding: 20px;
+  padding: 5px;
 }
 .mainChat_pic_name img {
-  width: 50%;
+  width: 40px;
+  height: 40px;
 }
 
 .pic_name_lastmsg_Pic {
-  float: left;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-8, 80px);
+  border-radius: 50%;
 }
 .name-lastmsg {
   display: flex;
@@ -129,13 +145,12 @@
   align-items: flex-start;
   flex: 1 0 0;
   border-radius: var(--8, 8px);
-  height: 80px;
+  height: 40px;
 }
 .line {
   width: 100%;
   height: 0.6px;
   background: rgba(0, 0, 0, 0.2);
-  margin: 10px;
 }
 .time-accumulated-messages {
   display: flex;
@@ -172,7 +187,7 @@
   letter-spacing: 0.256px;
 }
 .mainChat_pic_name {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: var(--between-sl, 12px);
   margin: 20px;
@@ -181,13 +196,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-right: 30px;
+  font-size: 10px;
+  margin-right: 10px;
 }
 .chatContainer {
   overflow-y: scroll;
 
-  height: 67%;
+  height: 70%;
 }
 .chatContainer::-webkit-scrollbar {
   display: none;
@@ -220,32 +235,36 @@
   right: 0px;
 }
 .typeArea {
-  width: 60%;
-  height: 100%;
-  display: inline-flex;
+  width: 100%;
+  height: 80%;
+  margin-left: 15px;
+  display: flex;
   align-items: center;
-  gap: var(--xxl-spacing, 32px);
+  align-content: center;
+  gap: var(--xxl-spacing, 5px);
   align-self: center;
-  background-color: #ffeded;
+  background-color: white;
+  border: 1px solid white;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
-  font-size: 36px;
+  font-size: 15px;
   resize: none;
-  margin-left: 20px;
+  padding: 5px;
 }
+
 .typeArea-sendBtn {
-  height: 12%;
-  bottom: 0px;
+  height: 7%;
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 20px;
   align-items: center;
   width: 100%;
 }
 .sendMsgBtn {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: flex;
+  margin-right: 40px;
 }
 .typeArea::-webkit-scrollbar {
   display: none;
@@ -273,9 +292,10 @@
   padding: 20px;
   padding-bottom: 40px;
   margin-left: auto;
+  font-size: 14px;
 }
 .userMsgStyle {
-  width: 439px;
+  width: 400px;
   border-radius: 23px;
   background-color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -285,6 +305,7 @@
   padding: 20px;
   padding-bottom: 40px;
   margin-right: auto;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 992px) {

@@ -22,20 +22,22 @@ const Mainchat = (probs) => {
     <>
       <div className="activeChat">
         <div className="chatHeader">
-          <div className="mainChat_pic_name">
-            <img
-              src={require(`${probs.chat.pic}`)}
-              alt=""
-              className="mainChat_pic"
-            />
+          <div className="mainChat_pic_contain">
+            <div className="mainChat_pic_name">
+              <img
+                src={require(`${probs.chat.pic}`)}
+                alt=""
+                className="mainChat_pic"
+              />
+            </div>
+            <div className="mainChat_name">{probs.chat.name}</div>
           </div>
-          <div className="mainChat_name">{probs.chat.name}</div>
 
           <div className="mainChat-options">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="20"
+              height="20"
               viewBox="0 0 32 32"
               fill="none"
             >
