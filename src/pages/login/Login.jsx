@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Illustration from "../../assets/images/register-img.jpg"
+import Illustration from "../../assets/images/right.jpg"
 import { useForm } from "react-hook-form";
 import './login.css'
 const Login = () => {
