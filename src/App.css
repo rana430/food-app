@@ -8,9 +8,6 @@
   box-sizing: border-box;
   font-family: "Cairo", sans-serif !important;
 }
-body {
-  overflow: auto;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -59,7 +56,6 @@ a {
 }
 
 .main-div > div {
-  height: 100vh;
   flex: 1;
 }
 
@@ -84,12 +80,12 @@ a {
   padding-inline: 19.5px;
   display: flex;
   width: auto;
-  transition: 0.3s all ease;
+  transition: 0.5s all ease;
   flex-direction: column;
   justify-content: space-between;
   padding-block: 50px;
   user-select: none;
-  overflow-y: auto;
+  overflow: hidden;
 }
 .sidebar-div a {
   color: rgb(0, 0, 0);
