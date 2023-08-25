@@ -101,6 +101,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background:rgba(224, 34, 0, 1);
 }
 #checkbox-field {
   width: 100%;
