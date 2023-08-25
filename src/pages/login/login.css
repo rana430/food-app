@@ -31,7 +31,7 @@
   position: relative;
 }
 .wrapper .images img {
-  height: 110%;
+  height: 96%;
   width: 100%;
   object-fit: cover;
   overflow: hidden;
