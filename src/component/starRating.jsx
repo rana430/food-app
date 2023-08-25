@@ -1,4 +1,5 @@
 import React from "react";
+import { Customer } from "../pages/Customer";
 import "../css/customerstyles.css";
 
 const StarRating = ({ rating }) => {
