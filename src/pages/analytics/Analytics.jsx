@@ -475,9 +475,7 @@ export default function Analystic() {
 
   return (
     <>
-      <Navbar />
       <div className="an-contain">
-        <Sidebar />
         {/* <Statistics /> */}
         <ItemsCarousel
           items={Dishes}
