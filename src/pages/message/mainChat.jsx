@@ -13,10 +13,10 @@ const Mainchat = (probs) => {
       time: Date().toLocaleString().slice(0, 24),
       text: `${writtenmsg}`,
     };
-    if(writtenmsg!=""){
-    probs.addMsg(newmsg);
-  }
-    setMsg("")
+    if (writtenmsg !== "") {
+      probs.addMsg(newmsg);
+    }
+    setMsg("");
   };
   return (
     <>
@@ -28,8 +28,8 @@ const Mainchat = (probs) => {
               alt=""
               className="mainChat_pic"
             />
-            <div className="mainChat_name">{probs.chat.name}</div>
           </div>
+          <div className="mainChat_name">{probs.chat.name}</div>
 
           <div className="mainChat-options">
             <svg
@@ -66,9 +66,9 @@ const Mainchat = (probs) => {
         <div className="chatContainer">
           {/* {probs.chat.messages.length?(<><Amessage msg={probs.chat.messages[0]}/></>):(<></>)} */}
           {probs.chat.messages.map((msg, ind) =>
-            ind == 0 ||
-            msg.didIsendIt != probs.chat.messages[ind - 1].didIsendIt ? (
-              msg.didIsendIt == true ? (
+            ind === 0 ||
+            msg.didIsendIt !== probs.chat.messages[ind - 1].didIsendIt ? (
+              msg.didIsendIt === true ? (
                 <div className="Amessageholderleft">
                   <br />
                   <Amessage msg={msg} />
