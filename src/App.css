@@ -6,19 +6,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Cairo", sans-serif !important;
 }
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .App {
   /* text-align: center; */
   margin: 0;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a{
+a {
   text-decoration: none !important;
 }
 .container {
@@ -43,7 +47,6 @@ a{
   }
 }
 
-
 .main-div {
   display: flex;
   flex-direction: row;
@@ -53,7 +56,6 @@ a{
 }
 
 .main-div > div {
-  height: 100vh;
   flex: 1;
 }
 
@@ -78,7 +80,7 @@ a{
   padding-inline: 19.5px;
   display: flex;
   width: auto;
-  transition: 0.3s all ease;
+  transition: 0.5s all ease;
   flex-direction: column;
   justify-content: space-between;
   padding-block: 50px;
@@ -123,18 +125,12 @@ a{
   width: 100%;
   /* height: 100%; */
 }
-.icons-avatar{
+.icons-avatar {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  margin-left:2rem ;
+  margin-left: 2rem;
 }
-.nameapp
-{
-  color: #E02200;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.flex-nowrap {
+  flex-wrap: nowrap;
 }

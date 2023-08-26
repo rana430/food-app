@@ -1,23 +1,26 @@
 .canvas {
   width: 100vw;
   height: 100vh;
-  background: rgb(249, 248, 254);
-  background: linear-gradient(
-    90deg,
-    rgba(249, 248, 254, 1) 0%,
-    rgba(198, 198, 240, 1) 35%,
-    rgba(97, 212, 236, 1) 100%
-  );
+
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.logo-login{
+  height: 20vh ;
+}
+.food-delivary{
+  font-size: xx-large;
+    font-weight: 600;
+    color: rgba(224, 34, 0, 1);
+    margin-top: 9px;
+}
 
 .wrapper {
-  height: 70vh;
-  width: 50vwh;
+  height: 91vh;
+  width: 50%;
   background-color: rgba(243, 243, 243, 0.559);
   border-radius: 30px;
   display: flex;
@@ -28,7 +31,7 @@
   position: relative;
 }
 .wrapper .images img {
-  height: 100%;
+  height: 96%;
   width: 100%;
   object-fit: cover;
   overflow: hidden;
@@ -137,4 +140,8 @@ button:hover {
 }
 .labals {
   font-size: 1.3rem;
+}
+
+.submit-btn{
+  background-color: rgba(224, 34, 0, 1) !important;
 }
