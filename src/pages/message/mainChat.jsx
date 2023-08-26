@@ -1,8 +1,9 @@
 import Amessage from "./Amessage";
 import "./styles/Chatappstyle.css";
-import React, { useState } from "react";
+import React, { useState , useRef  } from "react";
 
 const Mainchat = (probs) => {
+  const divRef = useRef(null);
   let [writtenmsg, setMsg] = useState("");
   let handleChange = (e) => {
     setMsg(e.target.value);
@@ -13,31 +14,46 @@ const Mainchat = (probs) => {
       time: Date().toLocaleString().slice(0, 24),
       text: `${writtenmsg}`,
     };
-    if (writtenmsg !== "") {
-      probs.addMsg(newmsg);
-    }
-    setMsg("");
+    if(writtenmsg!=""){
+    probs.addMsg(newmsg);
+  }
+    setMsg("")
   };
+  const scrollDiv = () => {
+    // Check if the divRef is available
+    if (divRef.current) {
+      // Scroll to a specific position (e.g., 100 pixels from the top)
+      divRef.current.scrollTop = 100000000000;
+    }
+  };
+
+
   return (
     <>
       <div className="activeChat">
         <div className="chatHeader">
-          <div className="mainChat_pic_contain">
-            <div className="mainChat_pic_name">
-              <img
-                src={require(`${probs.chat.pic}`)}
-                alt=""
-                className="mainChat_pic"
-              />
-            </div>
+
+          <div className="mainChat_pic_name">
+          <div onClick={ probs.swap } className="goback">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <path d="M0 0h48v48h-48z" fill="none"/>
+    <path d="M40 22h-24.34l11.17-11.17-2.83-2.83-16 16 16 16 2.83-2.83-11.17-11.17h24.34v-4z"/>
+</svg>
+            
+          </div>
+            <img
+              src={require(`${probs.chat.pic}`)}
+              alt=""
+              className="mainChat_pic"
+            />
             <div className="mainChat_name">{probs.chat.name}</div>
           </div>
 
           <div className="mainChat-options">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="32"
+              height="32"
               viewBox="0 0 32 32"
               fill="none"
             >
@@ -65,12 +81,12 @@ const Mainchat = (probs) => {
         </div>
         <div className="line"></div>
 
-        <div className="chatContainer">
+        <div className="chatContainer" ref={divRef}>
           {/* {probs.chat.messages.length?(<><Amessage msg={probs.chat.messages[0]}/></>):(<></>)} */}
           {probs.chat.messages.map((msg, ind) =>
-            ind === 0 ||
-            msg.didIsendIt !== probs.chat.messages[ind - 1].didIsendIt ? (
-              msg.didIsendIt === true ? (
+            ind == 0 ||
+            msg.didIsendIt != probs.chat.messages[ind - 1].didIsendIt ? (
+              msg.didIsendIt == true ? (
                 <div className="Amessageholderleft">
                   <br />
                   <Amessage msg={msg} />
@@ -95,11 +111,12 @@ const Mainchat = (probs) => {
         <div className="typeArea-sendBtn">
           <textarea
             className="typeArea"
+            onKeyPress={(e)=>{if (e.key === 'Enter') {sendMsg();scrollDiv();}}}
             value={writtenmsg}
             onChange={handleChange}
             placeholder="Type a Message...."
           ></textarea>
-          <div className="sendMsgBtn" onClick={sendMsg}>
+          <div className="sendMsgBtn" onClick={ ()=>{sendMsg();scrollDiv();} }>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"

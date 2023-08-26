@@ -15,8 +15,7 @@ const Chattitle = (probs) => {
         className="pic-name-lastmsg"
         onClick={() => {
           probs.setactiveChat(probs.ind);
-        }}
-      >
+        }}>
         <div>
           <img
             src={require(`${probs.data.pic}`)}
@@ -32,7 +31,7 @@ const Chattitle = (probs) => {
           </div>
         </div>
 
-        {/* <div className="time-accumulated-messages">
+        <div className="time-accumulated-messages">
           <div className="time lastMsg ">
             {" "}
             {probs.data.messages[probs.data.messages.length - 1].time.slice(
@@ -41,11 +40,12 @@ const Chattitle = (probs) => {
             )}
           </div>
 
-          {probs.data.unseenMsgs !== 0 && (
+          {probs.data.unseenMsgs != 0 && (
             <div className="accMsgs"> {probs.data.unseenMsgs} </div>
           )}
-        </div> */}
+        </div>
       </div>
+      <div className="line"></div>
     </>
   );
 };

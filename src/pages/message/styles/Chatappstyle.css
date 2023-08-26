@@ -105,8 +105,9 @@
   height: 100vh;
 }
 .chatHeader {
+  height: 7%;
   width: 100%;
-  height: 4.5em;
+  /* height: 4.5em; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -202,6 +203,7 @@
 }
 .chatContainer {
   overflow-y: scroll;
+
   height: 70%;
 }
 .chatContainer::-webkit-scrollbar {
@@ -269,14 +271,7 @@
 .typeArea::-webkit-scrollbar {
   display: none;
 }
-.goback {
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  margin-left: -30px;
-  visibility: hidden;
-  z-index: 0;
-}
+
 .message {
   width: 500px;
   font-size: 24px;
@@ -294,6 +289,7 @@
   margin-left: auto;
   font-size: 14px;
 }
+
 .userMsgStyle {
   width: 400px;
   border-radius: 23px;
@@ -307,21 +303,13 @@
   margin-right: auto;
   font-size: 14px;
 }
+
 @media screen and (max-width: 992px) {
-  .mainChat {
-    display: none;
+  .goback {
+    visibility: visible;
   }
   .ChatsContainer {
-    width: 100%;
-  }
-  .leftsideChats {
-    width: 100%;
-  }
-  .pic-name-lastmsg {
-    width: 100%;
-  }
-  .ChattitleContainer {
-    width: 100%;
+    margin-left: -349px;
   }
   .chatContainer {
     height: 75%;
@@ -337,9 +325,9 @@
   }
 }
 
-@media screen and (max-width: 630px) {
-  .typeArea-sendBtn {
-    gap: 10px;
+@media screen and (max-width: 550px) {
+  .goback {
+    visibility: visible;
   }
   .sendMsgBtn {
     width: 30px;

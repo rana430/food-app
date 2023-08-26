@@ -200,67 +200,79 @@ export default class Chatapp extends Component {
   };
 
   showshats = () => {
-    if (this.state.showContactsstyle.flag === false) {
+    if (this.state.showContactsstyle.flag == false) {
       let temp = {
         flag: true,
         style: { marginLeft: "349px" },
       };
       this.setState({ shouldComponentUpdate: temp });
     } else {
-      let temp = {
-        flag: false,
-        style: { marginLeft: "0px" },
-      };
-      this.setState({ shouldComponentUpdate: temp });
+      this.setState({ windowsize: "PC" });
     }
   };
+
   setactiveChat = (ind) => {
     this.setState({ activeChat: ind });
   };
   addMsg = (newMsg) => {
     let newmsgs = this.state.mychats;
     newmsgs[this.state.activeChat].messages.push(newMsg);
-    this.setState({});
+    this.setState({ mychats: newmsgs });
   };
 
+  swap = () => {
+    let a = this.state.show_ChatsContainer;
+    let b = this.state.show_mainChat;
+    this.setState({ show_ChatsContainer: b });
+    this.setState({ show_mainChat: a });
+
+    console.log(this.state.show_ChatsContainer, this.state.show_mainChat);
+  };
+  componentDidMount() {
+    this.setwindowsize();
+
+    //fetch
+  }
+
   render() {
+    // this.setwindowsize();
+
     return (
       <>
         <div className="chatAppContainer">
-          <div className="ChatsContainer" style={{}}>
+          <div
+            className={`ChatsContainer ${this.state.show_ChatsContainer}`}
+            style={{}}
+          >
             <div className="leftsideChats">
               {this.state.mychats.map((c, ind) => (
                 <>
-                  {ind === this.state.activeChat ? (
-                    <>
+                  {ind == this.state.activeChat ? (
+                    <div className="ChattitleContainer" onClick={this.swap}>
                       <Chattitle
                         data={c}
                         ind={ind}
                         setactiveChat={this.setactiveChat}
                         active={1}
                       />
-                    </>
+                    </div>
                   ) : (
-                    <>
+                    <div className="ChattitleContainer" onClick={this.swap}>
                       <Chattitle
                         data={c}
                         ind={ind}
                         setactiveChat={this.setactiveChat}
                         active={0}
                       />
-                    </>
+                    </div>
                   )}{" "}
                 </>
               ))}
             </div>
           </div>
-          <div className="mainChat">
-            <div
-              className="goback"
-              onClick={this.showshats}
-              style={{ backgroundColor: "red", height: "150px" }}
-            ></div>
+          <div className={`mainChat ${this.state.show_mainChat}`} style={{}}>
             <Mainchat
+              swap={this.swap}
               addMsg={this.addMsg}
               chat={this.state.mychats[this.state.activeChat]}
             />
