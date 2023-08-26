@@ -1,4 +1,4 @@
-body {
+.container-chats {
   overflow: hidden;
 }
 .ChatsContainer {
@@ -19,6 +19,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
 .chatAppContainer {
   display: flex;
@@ -30,7 +32,6 @@ body {
   gap: 0px;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .chatterName {
@@ -101,7 +102,7 @@ body {
   border-radius: 8px;
   background-color: #fdf4f2;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  height: 100vh;
 }
 .chatHeader {
   height: 7%;
@@ -203,7 +204,7 @@ body {
 .chatContainer {
   overflow-y: scroll;
 
-  height: 75%;
+  height: 70%;
 }
 .chatContainer::-webkit-scrollbar {
   display: none;
@@ -302,29 +303,13 @@ body {
   margin-right: auto;
   font-size: 14px;
 }
-.hide{
-  display: none;
-}
-@media screen and (min-width: 992px) {
-  .goback {
-      display: none;
-    }
-}
+
 @media screen and (max-width: 992px) {
-  /* .mainChat{
-      display: none;
-  } */
-  .ChatsContainer{
-  width: 100%;
+  .goback {
+    visibility: visible;
   }
-  .leftsideChats{
-      width: 100%;
-  }
-  .pic-name-lastmsg{
-      width: 100%;
-  }
-  .ChattitleContainer{
-      width: 100%;
+  .ChatsContainer {
+    margin-left: -349px;
   }
   .chatContainer {
     height: 75%;
@@ -340,9 +325,9 @@ body {
   }
 }
 
-@media screen and (max-width: 630px) {
-  .typeArea-sendBtn{
-    gap: 10px;
+@media screen and (max-width: 550px) {
+  .goback {
+    visibility: visible;
   }
   .sendMsgBtn {
     width: 30px;
@@ -362,6 +347,6 @@ body {
   .userMsgStyle {
     max-width: 250px;
     font-size: 8px;
-    padding:15px;
-}
+    padding: 15px;
+  }
 }
