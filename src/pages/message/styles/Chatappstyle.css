@@ -104,8 +104,9 @@ body {
     height: 100%;
   }
   .chatHeader {
+    height: 7%;
     width: 100%;
-    height: 4.5em;
+    /* height: 4.5em; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -202,7 +203,7 @@ body {
   .chatContainer {
     overflow-y: scroll;
   
-    height: 70%;
+    height: 75%;
   }
   .chatContainer::-webkit-scrollbar {
     display: none;
@@ -324,18 +325,11 @@ body {
     }
     .ChattitleContainer{
         width: 100%;
-
     }
-
-    /* .ChatsContainer {
-      margin-left: -349px;
-    } */
     .chatContainer {
-      height: 60%;
+      height: 75%;
     }
-    .typeArea-sendBtn {
-      height: 15%;
-    }
+
     .adminMsgStyle {
       max-width: 350px;
       font-size: 14px;
@@ -347,14 +341,19 @@ body {
   }
   
   @media screen and (max-width: 630px) {
-
-
+    .typeArea-sendBtn{
+      gap: 10px;
+    }
+    .sendMsgBtn {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      margin-right: 10px;
+    }
     .chatContainer {
-      height: 60%;
+      height: 75%;
     }
-    .typeArea-sendBtn {
-      height: 15%;
-    }
+
     .adminMsgStyle {
       max-width: 250px;
       font-size: 8px;
