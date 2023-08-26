@@ -1,4 +1,4 @@
-// import "./styles/Chatappstyle.css";
+import "./styles/Chatappstyle.css";
 import React, { useState } from "react";
 const Amessage = (probs) => {
   let [showAllLetters, setshowAllLetters] = useState(0);
