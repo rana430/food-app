@@ -18,25 +18,29 @@ const Sidebar = () => {
         } shadow bg-body-tertiary rounded`}
     >
       <div>
-      <div className="logo" style={{ display: sidebarOpen ? "block" : "none" }}>
-        <img src={logo} alt='logo' className='pb-3'/> <br /> Food Delivery
+        
+      <div className="logo" style={{ display: sidebarOpen ? "flex" : "none" }}>
+        <img src={logo} alt='logo' className='pb-3'/>  <span className='nameapp'>Food Delivery</span>
       </div >
+      
         <Link to="/ " className='mt-4'>
           <LuLayoutDashboard /> <p>Dashboard</p>
         </Link>
+
         <Link to="/analystic">
           <FiBookOpen /> <p>Analysitic</p>
         </Link>
+
         <Link to="/customer ">
           <SlHandbag /> <p>Customer </p>
         </Link>
+
         <Link to="/message">
-          <TiMessages />
-          <p>Message </p>
+          <TiMessages /> <p>Message </p>
         </Link>
+
         <Link to="/setting">
-          <FiSettings />
-          <p>Setting </p>
+          <FiSettings /> <p>Setting </p>
         </Link>
       </div>
       <div>
@@ -44,6 +48,7 @@ const Sidebar = () => {
         <Link to="/logout">
           <BiLogOutCircle /> <p>Log out</p>
         </Link>
+
         <div
           style={{ marginLeft: "auto" }}
           onClick={() => setSidebarOpen((pre) => !pre)}
