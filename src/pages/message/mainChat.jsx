@@ -14,7 +14,7 @@ const Mainchat = (probs) => {
       time: Date().toLocaleString().slice(0, 24),
       text: `${writtenmsg}`,
     };
-    if(writtenmsg!==""){
+    if(writtenmsg!=""){
     probs.addMsg(newmsg);
   }
     setMsg("")
@@ -84,9 +84,9 @@ const Mainchat = (probs) => {
         <div className="chatContainer" ref={divRef}>
           {/* {probs.chat.messages.length?(<><Amessage msg={probs.chat.messages[0]}/></>):(<></>)} */}
           {probs.chat.messages.map((msg, ind) =>
-            ind === 0 ||
-            msg.didIsendIt !== probs.chat.messages[ind - 1].didIsendIt ? (
-              msg.didIsendIt === true ? (
+            ind == 0 ||
+            msg.didIsendIt != probs.chat.messages[ind - 1].didIsendIt ? (
+              msg.didIsendIt == true ? (
                 <div className="Amessageholderleft">
                   <br />
                   <Amessage msg={msg} />
@@ -111,7 +111,9 @@ const Mainchat = (probs) => {
         <div className="typeArea-sendBtn">
           <textarea
             className="typeArea"
-            onKeyPress={(e)=>{if (e.key === 'Enter') {sendMsg();scrollDiv();}}}
+            onKeyPress={(e)=>{if (e.key === 'Enter') {
+              e.preventDefault();
+              sendMsg();scrollDiv();}}}
             value={writtenmsg}
             onChange={handleChange}
             placeholder="Type a Message...."
