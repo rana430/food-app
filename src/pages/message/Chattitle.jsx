@@ -40,7 +40,7 @@ const Chattitle = (probs) => {
             )}
           </div>
 
-          {probs.data.unseenMsgs != 0 && (
+          {probs.data.unseenMsgs !== 0 && (
             <div className="accMsgs"> {probs.data.unseenMsgs} </div>
           )}
         </div>
