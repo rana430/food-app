@@ -9,7 +9,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
-  overflow-x: hidden;
 }
 .food-item,
 .add {
@@ -24,7 +23,7 @@ body {
   gap: 0.3em;
   margin: 0.5em;
   padding: 5%;
-  height: 16.5em;
+  height: 15em;
 }
 
 .food-item img {
@@ -114,7 +113,7 @@ body {
 .contain-all {
   width: 100%;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 .all-in {
   width: 98%;
@@ -129,7 +128,9 @@ body {
 .btnPlus:hover {
   background-color: #fff;
 }
-
+.card {
+  padding: 20px;
+}
 .delete-button {
   background-color: #e02200;
   width: 60%;
