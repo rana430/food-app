@@ -307,20 +307,26 @@
   margin-right: auto;
   font-size: 14px;
 }
-
 @media screen and (max-width: 992px) {
-  .goback {
-    visibility: visible;
+  .mainChat {
+    display: none;
   }
   .ChatsContainer {
-    margin-left: -349px;
+    width: 100%;
+  }
+  .leftsideChats {
+    width: 100%;
+  }
+  .pic-name-lastmsg {
+    width: 100%;
+  }
+  .ChattitleContainer {
+    width: 100%;
   }
   .chatContainer {
-    height: 60%;
+    height: 75%;
   }
-  .typeArea-sendBtn {
-    height: 15%;
-  }
+
   .adminMsgStyle {
     max-width: 350px;
     font-size: 14px;
@@ -331,19 +337,20 @@
   }
 }
 
-@media screen and (max-width: 550px) {
-  .goback {
-    visibility: visible;
+@media screen and (max-width: 630px) {
+  .typeArea-sendBtn {
+    gap: 10px;
   }
-  .ChatsContainer {
-    margin-left: -349px;
+  .sendMsgBtn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin-right: 10px;
   }
   .chatContainer {
-    height: 60%;
+    height: 75%;
   }
-  .typeArea-sendBtn {
-    height: 15%;
-  }
+
   .adminMsgStyle {
     max-width: 250px;
     font-size: 8px;
