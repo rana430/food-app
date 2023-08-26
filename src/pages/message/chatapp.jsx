@@ -200,7 +200,7 @@ export default class Chatapp extends Component {
   };
 
   showshats = () => {
-    if (this.state.showContactsstyle.flag == false) {
+    if (this.state.showContactsstyle.flag === false) {
       let temp = {
         flag: true,
         style: { marginLeft: "349px" },
