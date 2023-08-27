@@ -1,0 +1,327 @@
+.MainDashboard
+{
+    display: grid;
+    margin: 2em;
+}
+.Revenues,
+.Bestseller,
+.CustomersState,
+.TeamAttendance
+{
+    padding-bottom: 2em;
+    display: grid;
+}
+.CustomersState,
+.TeamAttendance
+{
+border-radius: 10px;
+background: var(--white-100, #FFF);
+padding: 16px;
+/* Shadow */
+box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.TeamAttendance
+{
+    
+}
+.PannelChart
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+.NameRevenues
+{
+color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.352px;
+padding-bottom: 2em;
+}
+.CardsRevenues
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.CardRevn-Today
+{
+border-radius: 10px;
+background: var(--white-100, #FFF);
+box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.15);
+display: flex;
+padding: 16px 64px 16px 16px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+width: 25em;
+}
+.Today
+{
+color:  rgba(0, 0, 0, 0.85);
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.27px;
+}
+.AVG1
+{
+color:  #E02200;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.36px;
+}
+.avg2
+{
+color:  #1C1C1C;
+font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */
+}
+.LastDay
+{
+color:  rgba(0, 0, 0, 0.85);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.24px;
+}
+.AvgLastDay
+{
+color:  rgba(0, 0, 0, 0.65);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.24px;
+}
+.NameBestSeller
+{
+color: #000;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.FilterBestSeller
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.FilterColor,
+.FilterButton
+{
+    gap: 2em;
+    display: flex;
+}
+.filterbtn
+{
+    background-color: #FFEDE5;
+    border-radius:  8px;
+    width: 5em;
+    color: #E02200;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+transition: 0.9s;
+}
+.filterbtn:hover
+{
+border-radius:  8px;
+background: linear-gradient(180deg, #E02200 0%, #E56952 100%);
+width: 5em;
+color: var(--colors-white-100, var(--white-100, #FFF));
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+transition: 0.6s;
+}
+.Blue,
+.Yellow,
+.Green
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.Specail
+{
+    display: flex;
+   gap: 10em;
+}
+
+.Line-1
+{
+color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-bottom: 1em;
+}
+
+.Line-2
+{
+    display: flex;
+   align-items: center;
+    gap: 50px;
+    padding-bottom: 2em;
+}
+.TypeCustomer
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.NameAndNumber
+{
+    display: flex;
+    justify-content: space-between;
+}
+.NewTypeCustomer,
+.OldTypeCustomer,
+.ComeBackTypeCustomer
+{
+    color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+.NumberNewTypeCustomer
+{
+color: var(--colors-action-warning, #FFB200);
+text-align: right;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+.NumberOldTypeCustomer
+{
+    color: var(--colors-action-danger, #FF3A29);
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+.NumberComeBackTypeCustomer
+{
+    color: var(--colors-action-primary, #4339F2);
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+.Line-1T
+{
+color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.352px;
+}
+.Line-2T
+{
+border-radius: 5px;
+background: #FFF6F2;
+display: flex;
+margin-bottom: 1em;
+padding: 1em;
+align-items: center;
+gap: 10px;
+}
+.Line-3T
+{
+border-radius: 5px;
+background: #F4F4F4;
+display: flex;
+padding: 1em;
+align-items: center;
+gap: 10px;
+}
+.TeamMember,
+.TotalAdmin
+{
+color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.288px;
+}
+
+.NumberOfTeam,
+.NumberOfAdmin
+{
+color: var(--txt-main-color, rgba(0, 0, 0, 0.85));
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.288px;
+}
+.order-precentage {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    width: 60%;
+  }
+  .order-precentage p {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .precentage-container {
+    width: 30em;
+    border: 1px solid transparent;
+    border-radius: 30px;
+  }
+  .precentage-bar {
+    height: 8px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+  }
+  .StaticsTypeCustomer
+{
+    padding-bottom: 1em;
+}
