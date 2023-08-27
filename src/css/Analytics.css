@@ -72,14 +72,14 @@ body {
   align-content: center;
   margin-bottom: 2%;
 }
-.next,
+/* .next,
 .prev {
   width: 2em;
   height: 2em;
   flex-shrink: 0;
   border-radius: 14px;
   background: #e02200;
-}
+} */
 .next:hover,
 .prev:hover {
   background-color: #e02200;

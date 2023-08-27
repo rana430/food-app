@@ -1,23 +1,19 @@
 import React from "react";
-import "./settings.css";
-import {FaIdBadge} from "react-icons/fa6";
-const Setting = () => {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {SettingSideBar} from "../../component/settings/settingSideBar"; // Import your Setting component
+import {PersonalInfo} from "../../component/settings/personalInfo"; // Import your PersonalInfo component
+import {MenuManagement} from "../../component/settings/menuManagment"; // Import your MenuManagement component
+import "../../css/settings.css"
+const Settings = () => {
   return (
-    <div className="setting-container">
-      <div className="settings-sidebar">
-        <h3>Settings</h3>
-        <div className="settings-items">
-          <ul>
-            <li className="active-li"><FaIdBadge className="icons"/>Personal Information</li>
-            <li><FaIdBadge className="icons"/>Menu Management</li>
-            <li><FaIdBadge className="icons"/>Order Management</li>
-            <li><FaIdBadge className="icons"/>Security&Privacy</li>
-            <li><FaIdBadge className="icons"/>Payment &Pricing</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <>
+    <SettingSideBar/>
+      <Routes>
+        <Route path="/personalInfo" element={<PersonalInfo />} />
+        <Route path="/menuManagement" element={<MenuManagement />} />
+      </Routes>
+</>
   );
-};
+}
 
-export default Setting;
+export default Settings;

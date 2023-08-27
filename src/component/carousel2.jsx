@@ -80,7 +80,7 @@ export default class Carousel2 extends Component {
             <h3>Customer Review</h3>
             <p>Eum fuga consequuntur utadsjn et.</p>
           </div>
-          <div className="buttons">
+          <div className="buttons-customer">
             <button
               className="prev"
               onClick={this.previous}
