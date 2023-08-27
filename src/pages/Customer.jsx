@@ -3,7 +3,7 @@ import Carousel1 from "../../src/component/carousel1"
 import Carousel2 from "../../src/component/carousel2";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../css/customerstyles.css";
-export const Customer = () => {
+export default function Customer () {
   const customers = [
     {
       name: "Bassant",

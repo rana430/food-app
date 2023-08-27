@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const MenuManagement = () => {
+export default function MenuManagement () {
   return (
-    <div>menuManagement</div>
+    <div className='menuManagement' >menuManagement</div>
   )
 }
