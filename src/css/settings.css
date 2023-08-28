@@ -28,7 +28,8 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin: 0 auto;
+
   font-size: 18px;
 }
 .settings-sidebar h3 {
@@ -101,3 +102,46 @@
     flex-wrap: nowrap;
   }
 }
+
+/*personal info section*/
+
+.setting-personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: flex-start;
+  border-radius: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 65%;
+  margin: 0 auto;
+  padding: 0.7rem;
+}
+.upload-photo-flex {
+  display: flex;
+  flex-direction: column;
+
+  width: 25%;
+  margin: 0 auto;
+  align-items: center;
+
+  padding: 0.7rem;
+}
+.setting-upload-photo {
+  border: 1px dashed #000;
+  background-color: var(--light-gray-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7em 0;
+}
+.setting-upload-photo img{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+
+}
+
